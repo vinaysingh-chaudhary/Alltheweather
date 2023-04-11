@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlltheWeather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/Alltheweather/images/cloudy.png" />
+
+    <meta property="og:title" content="AlltheWeather" />
+    <meta
+      property="og:description"
+      content="search and see the weather of any place"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="tab-container">
+        <p class="tab" userWeatherData>Your Weather</p>
+        <p class="tab" searchWeatherData>Search Weather</p>
+      </div>
+
+      <div class="weather-container">
+        <!-- GrantLocationDiv -->
+        <div class="allow-location-container all-containers">
+          <img src="images/location.png" alt="" />
+          <p>Allow access to your location for weather information</p>
+          <button class="location-btn" location-btn>Allow Location</button>
+        </div>
+
+        <!-- SearchWeatherDiv -->
+        <form class="search-weather-form" searchWeatherFormContainer>
+          <input
+            type="text"
+            class="search-weather-bar"
+            placeholder="Search your city..."
+            dataSearchInput
+          />
+          <button class="search-btn" searchWeatherButton>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <!-- LoadingScreen -->
+        <div class="loading-screen all-containers">
+          <img src="/Alltheweather/images/loading.gif" alt="" />
+          <p>Loading</p>
+        </div>
+
+        <!-- error page -->
+        <div class="error-page all-containers" errorPage>
+          <img src="images/Tada Error.jpg" alt="" />
+          <p>City not found</p>
+        </div>
+
+        <!-- UserWeatherInformation -->
+        <div class="userweatherinfo">
+          <div class="main-weather-info">
+            <div class="city-flag-desc">
+              <!-- city name and flag -->
+              <div class="cityFlag">
+                <p userCityName></p>
+                <img userCountryFlag src="" alt="" />
+              </div>
+
+              <div class="weather-desc-icon">
+                <!-- weather Description -->
+                <p class="weatherdesc" userWeatherDescription></p>
+
+                <!-- weather image visual -->
+                <img class="weathericon" userWeatherIcon src="" alt="" />
+              </div>
+            </div>
+
+            <!-- temperature -->
+            <p class="temperature" dataTemperature></p>
+          </div>
+
+          <!-- additional data cards -->
+          <div class="additional-data-cards">
+            <!-- card-1-->
+            <div class="wind-parameter parameter-card">
+              <img src="/Alltheweather/images/wind-icon.png" alt="" />
+              <p>Wind Speed</p>
+              <p windSpeedInfo></p>
+            </div>
+
+            <!-- card-2-->
+            <div class="humidity-parameter parameter-card">
+              <img src="/Alltheweather/images/humidity.png" alt="" />
+              <p>Humidity</p>
+              <p HumidityInfo></p>
+            </div>
+
+            <!-- card-3-->
+            <div class="cloud-parameter parameter-card">
+              <img src="/Alltheweather/images/cloud.png" alt="" />
+              <p>Clouds</p>
+              <p cloudInfo></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/9f36861056.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
